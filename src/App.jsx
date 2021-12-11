@@ -1,87 +1,43 @@
 import "./style.css";
 
-import Code from "./Code";
-
-// function based component
-
 function App() {
-  const code_texts = [
-    "$ npm init vite@latest",
-    "$ yarn create vite",
-    "$ pnpm create vite",
-  ];
-
-  function toggle_menu(id) {
-    const element = document.querySelector(`#${id}`);
-
-    if (element.classList.contains("show")) {
-      element.classList.remove("show");
-      element.classList.add("hide");
-    } else {
-      element.classList.add("show");
-      element.classList.remove("hide");
-    }
-  }
-
   return (
     <div>
-      <button
-        className="menu-bar"
-        onClick={() => {
-          toggle_menu("menu");
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      {/* <div className="sidebar show">
-        <div className="content">
-          ><button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button
+      <div className="card">
+        <div className="top">
+          <h3>card details</h3>
+          <img
+            src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVhdXRpZnVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            alt=""
+          />
         </div>
-      </div> */}
-
-      <div className="drop-down" id="menu">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
+        <p className="p1">card type</p>
+        <div className="cardtype">
+          <div className="card1">card1</div>
+          <div className="card2">card2</div>
+          <div className="card3">card3</div>
+          <div className="card4">card4</div>
+        </div>
+        <div className="forms">
+          <label>Name on card</label>
+          <input type="text" />
+          <label>card number</label>
+          <input type="number" />
+          <label>expiry date</label>
+          <input type="date" />
+          <label>CVV</label>
+          <input type="number" />
+        </div>
+        <hr />
+        <div className="price">
+          <div className="subtotal">subtotal</div>
+          <div className="shippin">shipping</div>
+          <div className="total">total</div>
+        </div>
+        <a href="">$3 820.00 checkout</a>
       </div>
-
-      {code_texts.map((code_text) => (
-        <Code code_text={code_text} />
-      ))}
     </div>
   );
 }
 
-// class based component
-
-// import React from "react";
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <p>
-//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officiis
-//         minima quibusdam possimus tenetur optio ea veniam exercitationem omnis
-//         architecto perferendis neque sint laboriosam? Omnis in tempora
-//         repudiandae fuga. Repellat?
-//       </p>
-//     );
-//   }
-// }
-
 export default App;
-
-// () => {
-//   return 10
-// }
-
-// () => (10)
